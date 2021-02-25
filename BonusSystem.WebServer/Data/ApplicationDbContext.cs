@@ -1,4 +1,4 @@
-﻿using BonusSystem.WebServer.Models;
+﻿using Bonus_System.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BonusSystem.WebServer.Data

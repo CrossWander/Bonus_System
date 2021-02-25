@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IdentityErrors\" />
+    <ProjectReference Include="..\Bonus System.Core\Bonus System.Core.csproj" />
   </ItemGroup>
 
 </Project>

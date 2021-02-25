@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\CrossWander\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\CrossWander\\.nuget\\packages"
+    ]
+  }
+}

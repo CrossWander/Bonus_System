@@ -2743,6 +2743,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Bonus System.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Bonus System.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bonus System.Core.dll": {}
+        }
       }
     }
   },
@@ -8810,10 +8820,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Bonus System.Core/1.0.0": {
+      "type": "project",
+      "path": "../Bonus System.Core/Bonus System.Core.csproj",
+      "msbuildProject": "../Bonus System.Core/Bonus System.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Bonus System.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.11",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.11",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.11",
@@ -8846,7 +8862,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\CrossWander\\Desktop\\projects\\Bonus System\\Bonus System.Core\\Bonus System.Core.csproj": {
+              "projectPath": "C:\\Users\\CrossWander\\Desktop\\projects\\Bonus System\\Bonus System.Core\\Bonus System.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

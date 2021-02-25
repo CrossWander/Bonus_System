@@ -1,6 +1,7 @@
-﻿using BonusSystem.WebServer.ApiModels;
+﻿using Bonus_System.Core.ApiModels;
+using Bonus_System.Core.Routes;
 using BonusSystem.WebServer.Data;
-using BonusSystem.WebServer.Models;
+using Bonus_System.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,7 +25,8 @@ namespace BonusSystem.WebServer.Controllers
             Context = dbContext;
         }
 
-       // [HttpGet]
+        //[HttpPost]
+        // [Route("users/{name}")]
         [Route(ApiRoutes.SearchBonusCard)]
         public async Task<FullInfoBonusCard> SearchBonusCard([FromBody]SearchBonusCardApiModel searchBonus)
         {
@@ -58,29 +60,29 @@ namespace BonusSystem.WebServer.Controllers
                 LastName = bonusCard.LastName,
                 PhoneNumber = bonusCard.PhoneNumber
             };
-            var newbonusCard = new BonusCard
+          /*  var newbonusCard = new BonusCard
             {
                 ClientId = newClient.ClientId,
                 CardNumber = bonusCard.BonusCard.CardNumber,
                 Balance = bonusCard.BonusCard.Balance,
                 ExpirationDate = bonusCard.BonusCard.ExpirationDate
-            };
+            };*/
 
 
             return new FullInfoBonusCard
             {
-                    FirstName = newClient.FirstName,
-                    LastName = newClient.LastName,
-                    PhoneNumber = newClient.PhoneNumber,
-                    CardNumber = newbonusCard.CardNumber,
-                    Balance = newbonusCard.Balance,
-                    ExpirationDate = newbonusCard.ExpirationDate
+                FirstName = newClient.FirstName,
+                LastName = newClient.LastName,
+                PhoneNumber = newClient.PhoneNumber,
+             //   CardNumber = newbonusCard.CardNumber,
+             //   Balance = newbonusCard.Balance,
+            //    ExpirationDate = newbonusCard.ExpirationDate
             };
 
         }
 
 
-        [HttpPost]
+        //  [HttpPost]
         [Route(ApiRoutes.CreateCard)]
         public async Task<FullInfoBonusCard> CreateBonusCard([FromBody]CreateBonusCardApiModel createCard)
         {

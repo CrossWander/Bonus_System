@@ -152,3 +152,5 @@ C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Deb
 C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Debug\netcoreapp3.1\Bonus System.Core.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\BonusSystem.WebServer\bin\Debug\netcoreapp3.1\Bonus System.Core.pdb

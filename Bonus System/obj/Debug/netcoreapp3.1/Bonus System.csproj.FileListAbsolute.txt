@@ -1,0 +1,42 @@
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.csprojAssemblyReference.cache
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\CustomControls\MenuButtons.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\MainWindowView.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\SearchBonusCardView.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System_MarkupCompile.cache
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System_MarkupCompile.lref
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.exe
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.dll.config
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.deps.json
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.runtimeconfig.json
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.runtimeconfig.dev.json
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.pdb
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Caliburn.Micro.Platform.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Caliburn.Micro.Core.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.Core.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\bin\Debug\netcoreapp3.1\Bonus System.Core.pdb
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\CustomControls\MenuButtons.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Resourses\Buttons.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Resourses\icons.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Resourses\Texts.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\MainWindowView.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\SearchBonusCardView.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.g.resources
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.AssemblyInfoInputs.cache
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.AssemblyInfo.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.csproj.CoreCompileInputs.cache
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.csproj.CopyComplete
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.dll
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.pdb
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Bonus System.genruntimeconfig.cache
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\CardView.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\CardView.baml
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\CreateCardView.g.cs
+C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System\obj\Debug\netcoreapp3.1\Views\CreateCardView.baml

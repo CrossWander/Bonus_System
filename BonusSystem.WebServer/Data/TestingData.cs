@@ -1,4 +1,4 @@
-﻿using BonusSystem.WebServer.Models;
+﻿using Bonus_System.Core.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
