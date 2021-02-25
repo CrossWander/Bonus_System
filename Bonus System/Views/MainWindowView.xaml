@@ -19,13 +19,17 @@
     <!-- Layouting -->
     <Border CornerRadius="20" Background="White">
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="180"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="130"/>
             </Grid.ColumnDefinitions>
-            <Grid>
-                <StackPanel Orientation="Vertical" Margin="0,85,0,0">
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Vertical" Margin="0,55,0,0">
                     <TextBlock Text="Bonus Card" Foreground="#515EC1" Margin="35,0,0,0"
                            HorizontalAlignment="Left" VerticalAlignment="Center" 
                            FontSize="22" FontFamily="Cambria Math"/>
@@ -62,8 +66,8 @@
                 </Grid>
 
             </Grid>
-
-            <Grid Grid.Column="1" Background="#EFF2F8">
+            <Grid Grid.Column="1" Grid.Row="0" Background="#EFF2F8" MouseDown="Grid_MouseDown"/>
+            <Grid Grid.Row="1" Grid.Column="1" Background="#EFF2F8">
                 <!-- <Frame x:Name="Views" NavigationUIVisibility="Hidden"/> -->
                 <ContentControl x:Name="ActiveItem" />
 

@@ -32,10 +32,10 @@ namespace Bonus_System.Views
             this.Close();
         }
 
-
-        private void Grid_DragEnter(object sender, DragEventArgs e)
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }
