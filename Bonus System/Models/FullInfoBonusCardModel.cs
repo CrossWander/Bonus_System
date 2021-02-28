@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Bonus_System.Models
 {
-    public class FullInfoBonusCardModel : Caliburn.Micro.PropertyChangedBase,  IFullInfoBonusCardModel 
+    public class FullInfoBonusCardModel : Caliburn.Micro.PropertyChangedBase
     {
 
         private string _cardNumber;
@@ -51,9 +51,6 @@ namespace Bonus_System.Models
                 NotifyOfPropertyChange(() => FirstName);
             }
         }
-
-        public string ErrorMessage { get; set; }
-
 
         private string _lastName;
 

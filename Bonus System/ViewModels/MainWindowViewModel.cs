@@ -11,7 +11,7 @@ using Caliburn.Micro;
 
 namespace Bonus_System.ViewModels
 {
-    public class MainWindowViewModel : Conductor<object>, IHandle<FindCardEvent> //, IHandle<FullInfoBonusCardModel>
+    public class MainWindowViewModel : Conductor<object>, IHandle<FindCardEvent>
     {
         private IEventAggregator _events;
         private CardViewModel _cardVM;
@@ -23,7 +23,8 @@ namespace Bonus_System.ViewModels
         {
 
             _events = events;
-            _events.Subscribe(this);
+            _events.SubscribeOnPublishedThread(this);
+            //_events.Subscribe(this);
 
             _cardVM = cardVM;
             _createCardVM = createCardVM;
@@ -48,10 +49,5 @@ namespace Bonus_System.ViewModels
         {
             ActivateItemAsync(_container.GetInstance<SearchBonusCardViewModel>());
         }
-
-      /*  public Task HandleAsync(FullInfoBonusCardModel message, CancellationToken cancellationToken)
-        {
-            return 
-        }*/
     }
 }

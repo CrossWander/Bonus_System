@@ -6,8 +6,8 @@ namespace Bonus_System.Helpers
 {
     public interface IAPIHelper
     {
-        Task<FullInfoBonusCard> CardBalanceMovement(BonusCardBalanceMovementApiModel newBalance);
-        Task<FullInfoBonusCard> CreateBonusCard(CreateBonusCardApiModel createCard);
+        Task<FullInfoBonusCardModel> CardBalanceMovement(BonusCardBalanceMovementApiModel newBalance);
+        Task<FullInfoBonusCardModel> CreateBonusCard(CreateBonusCardApiModel createCard);
         Task<FullInfoBonusCardModel> SearchBonusCard(string CardOrPhoneNumber);
     }
 }

@@ -12,34 +12,36 @@ using System.Threading;
 
 namespace Bonus_System.ViewModels
 {
-    public class CardViewModel : Screen
+    public class CardViewModel : Screen, IHandle<FindCardEvent>
     {
 
-        private FullInfoBonusCard fullInfoBonusCard = new FullInfoBonusCard();
-
-
-
         private IAPIHelper _apiHelper;
-        private string _errorMessage;
         private IEventAggregator _events;
+        private FullInfoBonusCardModel _fullInfoBonusCard;
 
         public CardViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
             _apiHelper = apiHelper;
             _events = events;
-           // _fullInfoBonusCard = fullInfoBonusCard;
+            _events.SubscribeOnPublishedThread(this);
         }
         
 
-    /*    public FullInfoBonusCard FullInfoBonusCard
+        public FullInfoBonusCardModel FullInfoBonusCard
         {
-            get { return (FullInfoBonusCard)_fullInfoBonusCard; }
+            get { return _fullInfoBonusCard; }
             set
             {
-                _fullInfoBonusCard = (IFullInfoBonusCardModel)value;
+                _fullInfoBonusCard = value;
                 NotifyOfPropertyChange(() => _fullInfoBonusCard);
             }
-        }*/
+        }
+
+        public async Task HandleAsync(FindCardEvent message, CancellationToken cancellationToken)
+        {
+            FullInfoBonusCard = message.FullInfoBonusCard;
+        }
+
 
         protected override async void OnViewLoaded(object view)
         {
@@ -49,15 +51,10 @@ namespace Bonus_System.ViewModels
 
         private async Task LoadProducts()
         {
-         /*   Client = FullInfoBonusCard.FirstName + " " + FullInfoBonusCard.LastName;
+            Client = FullInfoBonusCard.FirstName.Trim() + " " + FullInfoBonusCard.LastName.Trim();
             CardNumber = FullInfoBonusCard.CardNumber;
             EndingData = FullInfoBonusCard.ExpirationDate;
-            Bonuses = FullInfoBonusCard.Balance.ToString();*/
-
-            Client = fullInfoBonusCard.FirstName + " " + fullInfoBonusCard.LastName;
-            CardNumber = fullInfoBonusCard.CardNumber;
-            EndingData = fullInfoBonusCard.ExpirationDate;
-            Bonuses = fullInfoBonusCard.Balance.ToString();
+            Bonuses = Math.Round((decimal)FullInfoBonusCard.Balance,2).ToString();
         }
 
         private string _client;
@@ -164,10 +161,11 @@ namespace Bonus_System.ViewModels
             try
             {
 
-                await _apiHelper.CardBalanceMovement(bonusCardBalanceMovement);
+                FullInfoBonusCard = await _apiHelper.CardBalanceMovement(bonusCardBalanceMovement);
+                await LoadProducts();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //  ErrorMessage = ex.Message;
             }
@@ -183,10 +181,10 @@ namespace Bonus_System.ViewModels
 
             try
             {
-
-                await _apiHelper.CardBalanceMovement(bonusCardBalanceMovement);
+                FullInfoBonusCard = await _apiHelper.CardBalanceMovement(bonusCardBalanceMovement);
+                await LoadProducts();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //  ErrorMessage = ex.Message;
             }

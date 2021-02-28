@@ -25,13 +25,11 @@ namespace Bonus_System
         protected override void Configure()
         {
             _container.Instance(_container);
-              //  .PerRequest<IFullInfoBonusCardModel, FullInfoBonusCardModel>();
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IAPIHelper, APIHelper>()
-                .Singleton<IFullInfoBonusCardModel, FullInfoBonusCardModel>();
+                .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)

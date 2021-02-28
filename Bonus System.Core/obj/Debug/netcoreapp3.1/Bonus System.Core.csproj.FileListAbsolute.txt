@@ -6,4 +6,3 @@ C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System.Core\obj\Debug\n
 C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System.Core\obj\Debug\netcoreapp3.1\Bonus System.Core.csproj.CoreCompileInputs.cache
 C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System.Core\obj\Debug\netcoreapp3.1\Bonus System.Core.dll
 C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System.Core\obj\Debug\netcoreapp3.1\Bonus System.Core.pdb
-C:\Users\CrossWander\Desktop\projects\Bonus System\Bonus System.Core\obj\Debug\netcoreapp3.1\Bonus System.Core.csprojAssemblyReference.cache

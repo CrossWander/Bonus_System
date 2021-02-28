@@ -1,16 +1,19 @@
-﻿using Bonus_System.EventModels;
+﻿using Bonus_System.Core.ApiModels;
+using Bonus_System.EventModels;
 using Bonus_System.Helpers;
+using Bonus_System.Models;
 using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
 namespace Bonus_System.ViewModels
 {
-    public class SearchBonusCardViewModel : Screen
+    public class SearchBonusCardViewModel : Screen, IHandle<FindCardEvent>
     {
 
         private IAPIHelper _apiHelper;
@@ -75,11 +78,11 @@ namespace Bonus_System.ViewModels
             try
             {
                 ErrorMessage = "";
-                await _apiHelper.SearchBonusCard(CardOrPhoneNumber);
-                await _events.PublishOnUIThreadAsync(new FindCardEvent());
+                FullInfoBonusCardModel fullinfo = await _apiHelper.SearchBonusCard(CardOrPhoneNumber);
+                await _events.PublishOnUIThreadAsync(new FindCardEvent(fullinfo));
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
               //  ErrorMessage = ex.Message;
                 ErrorMessage = "Such card or phone number not exists";
@@ -87,8 +90,9 @@ namespace Bonus_System.ViewModels
 
         }
 
-
-
-
+        public Task HandleAsync(FindCardEvent message, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

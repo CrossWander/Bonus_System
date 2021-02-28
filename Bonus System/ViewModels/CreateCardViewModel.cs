@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using Bonus_System.Core.ApiModels;
 using System.Text.RegularExpressions;
 using System.Threading;
+using Bonus_System.Models;
 
 namespace Bonus_System.ViewModels
 {
-    public class CreateCardViewModel : Screen, IHandle<ViewCardEvent>
+    public class CreateCardViewModel : Screen, IHandle<FindCardEvent>
     {
 
         private IAPIHelper _apiHelper;
@@ -103,7 +104,7 @@ namespace Bonus_System.ViewModels
 
 
 
-        public Task HandleAsync(ViewCardEvent message, CancellationToken cancellationToken)
+        public Task HandleAsync(FindCardEvent message, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -120,15 +121,15 @@ namespace Bonus_System.ViewModels
             try
             {
 
-                await _apiHelper.CreateBonusCard(createBonusCardApiModel);
+                FullInfoBonusCardModel fullinfo = await _apiHelper.CreateBonusCard(createBonusCardApiModel);
 
 
                 //ErrorMessage = "";
                 //   await _apiHelper.CreateBonusCard(CardOrPhoneNumber);
                 //
-                await _events.PublishOnUIThreadAsync(new FindCardEvent());
+                await _events.PublishOnUIThreadAsync(new FindCardEvent(fullinfo));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
               //  ErrorMessage = ex.Message;
             }

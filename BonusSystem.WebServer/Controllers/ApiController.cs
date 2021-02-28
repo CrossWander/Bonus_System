@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace BonusSystem.WebServer.Controllers
 
 {
-    [Produces(MediaTypeNames.Application.Json)]
+  //  [Produces(MediaTypeNames.Application.Json)]
     [ApiController]
     public class ApiController : ControllerBase
     {
@@ -67,7 +67,7 @@ namespace BonusSystem.WebServer.Controllers
             };
 
 
-            return new FullInfoBonusCard
+            return new FullInfoBonusCard()
             {
                 FirstName = newClient.FirstName,
                 LastName = newClient.LastName,
@@ -174,7 +174,7 @@ namespace BonusSystem.WebServer.Controllers
 
 
             // Get the current bonus card
-            var bonusCard = Context.BonusCards.FirstOrDefault(p => p.CardNumber.Equals(newBalance.CardNumber));
+            var bonusCard = Context.Clients.Include(p => p.BonusCard).FirstOrDefault(p => p.BonusCard.CardNumber.Equals(newBalance.CardNumber));
 
             // If we have no card
             if (bonusCard == null)
@@ -187,33 +187,35 @@ namespace BonusSystem.WebServer.Controllers
             if (!newBalance.WithdrawBalance)
             {
                 //add to balance
-                bonusCard.Balance += newBalance.NewBalance;
-                bonusCard.ExpirationDate = bonusCard.ExpirationDate.AddYears(1);
+                bonusCard.BonusCard.Balance += newBalance.NewBalance;
+                bonusCard.BonusCard.ExpirationDate = bonusCard.BonusCard.ExpirationDate.AddMonths(6);
             }
             else
             { 
-                if (bonusCard.Balance == null || bonusCard.Balance == 0)
+                if (bonusCard.BonusCard.Balance == null || bonusCard.BonusCard.Balance == 0)
                     return new FullInfoBonusCard()
                     {
                         ErrorMessage = "Bonus Card has no balance"
                     };
-                if (bonusCard.Balance < newBalance.NewBalance)
+                if (bonusCard.BonusCard.Balance < newBalance.NewBalance)
                     return new FullInfoBonusCard()
                     {
                         ErrorMessage = "Bonus Card don't have enought cash for withdraw"
                     };
 
                 //withwraw from balance
-                bonusCard.Balance -= newBalance.NewBalance;
+                bonusCard.BonusCard.Balance -= newBalance.NewBalance;
             }
 
             await Context.SaveChangesAsync();
 
             return new FullInfoBonusCard()
             {
-                CardNumber = bonusCard.CardNumber,
-                Balance = bonusCard.Balance,
-                ExpirationDate = bonusCard.ExpirationDate
+                FirstName = bonusCard.FirstName,
+                LastName = bonusCard.LastName,              
+                CardNumber = bonusCard.BonusCard.CardNumber,
+                Balance = bonusCard.BonusCard.Balance,
+                ExpirationDate = bonusCard.BonusCard.ExpirationDate
             };
 
         }
