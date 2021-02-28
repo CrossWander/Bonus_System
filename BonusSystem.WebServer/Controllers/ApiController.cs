@@ -25,7 +25,7 @@ namespace BonusSystem.WebServer.Controllers
             Context = dbContext;
         }
 
-        //[HttpPost]
+       // [HttpPost]
         // [Route("users/{name}")]
         [Route(ApiRoutes.SearchBonusCard)]
         public async Task<FullInfoBonusCard> SearchBonusCard([FromBody]SearchBonusCardApiModel searchBonus)
@@ -40,16 +40,14 @@ namespace BonusSystem.WebServer.Controllers
             // Is it phone number?
             var isPhoneNumber = searchBonus.CardOrPhoneNumber.Length > 6 && searchBonus.CardOrPhoneNumber.Length <= 10;
 
-            var bonusCard = isPhoneNumber ?
-                Context.Clients.FirstOrDefault(p => p.PhoneNumber.Equals(searchBonus.CardOrPhoneNumber)) :
-                Context.Clients.FirstOrDefault(p => p.BonusCard.CardNumber.Equals(searchBonus.CardOrPhoneNumber));
+            var bonusCard = isPhoneNumber ?   
+                Context.Clients.Include(p => p.BonusCard).FirstOrDefault(p => p.PhoneNumber.Equals(searchBonus.CardOrPhoneNumber)) :
+                Context.Clients.Include(p => p.BonusCard).FirstOrDefault(p => p.BonusCard.CardNumber.Equals(searchBonus.CardOrPhoneNumber));
 
             // If we failed to find a card...
             if (bonusCard == null)
-                // Return error message
                 return new FullInfoBonusCard()
                 {
-                    // TODO: Localization
                     ErrorMessage = "Card not found"
                 };
 
@@ -60,13 +58,13 @@ namespace BonusSystem.WebServer.Controllers
                 LastName = bonusCard.LastName,
                 PhoneNumber = bonusCard.PhoneNumber
             };
-          /*  var newbonusCard = new BonusCard
+            var newbonusCard = new BonusCard
             {
                 ClientId = newClient.ClientId,
                 CardNumber = bonusCard.BonusCard.CardNumber,
                 Balance = bonusCard.BonusCard.Balance,
                 ExpirationDate = bonusCard.BonusCard.ExpirationDate
-            };*/
+            };
 
 
             return new FullInfoBonusCard
@@ -74,9 +72,9 @@ namespace BonusSystem.WebServer.Controllers
                 FirstName = newClient.FirstName,
                 LastName = newClient.LastName,
                 PhoneNumber = newClient.PhoneNumber,
-             //   CardNumber = newbonusCard.CardNumber,
-             //   Balance = newbonusCard.Balance,
-            //    ExpirationDate = newbonusCard.ExpirationDate
+                CardNumber = newbonusCard.CardNumber,
+                Balance = newbonusCard.Balance,
+                ExpirationDate = newbonusCard.ExpirationDate
             };
 
         }
@@ -98,7 +96,6 @@ namespace BonusSystem.WebServer.Controllers
 
             // If we have no credentials...
             if (createCard == null)
-                // Return failed response
                 return errorResponse;
 
             // Check if we have both a first and last name
@@ -113,14 +110,13 @@ namespace BonusSystem.WebServer.Controllers
 
             // If we don't have enough details
             if (notEnoughSearchDetails)
-                // Return error
                 return new FullInfoBonusCard
                 {
                     ErrorMessage = "Please provide a first and last name or phone number"
                 };
 
 
-            // Create the desired user from the given details
+            // Create the desired client from the given details
             var newClient = new Client
             {
                // ClientId = (Context.Clients.Max(e => e.ClientId) + 1),
@@ -184,7 +180,6 @@ namespace BonusSystem.WebServer.Controllers
             if (bonusCard == null)
                 return new FullInfoBonusCard()
                 {
-                    // TODO: Localization
                     ErrorMessage = "Card not found"
                 };
 

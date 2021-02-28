@@ -5,6 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Bonus_System</RootNamespace>
     <UseWPF>true</UseWPF>
+    <Company>Makeshift Home Software Group</Company>
+    <Version>1.0.0</Version>
+    <Authors>CrossWander</Authors>
+    <ApplicationIcon>Assets\Logo\projectlogo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

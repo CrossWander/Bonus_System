@@ -17,7 +17,7 @@
     </Window.Resources>
 
     <!-- Layouting -->
-    <Border CornerRadius="20" Background="White">
+    <Border CornerRadius="20" Background="White" BorderBrush="#FF55B2FF" BorderThickness="0.5">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -34,11 +34,25 @@
                            HorizontalAlignment="Left" VerticalAlignment="Center" 
                            FontSize="22" FontFamily="Cambria Math"/>
 
+
+
+
+             <!--       <customcontrols:MenuButtons GroupName="MenuButtons" x:Name="SearchCard" Margin="0,35,0,0" Text="Search Bonus Card" Icon="{StaticResource Search}"
+                                             IsSelected="True" IsCheked="{Binding SearchCard}"/>
+                    <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                        <TextBlock Margin="35,5,0,0" Text="Choose method for search" Style="{StaticResource TitleText}"/>
+                        <customcontrols:MenuButtons GroupName="MethodButtons" IsSelected="True" Icon="{StaticResource Folders}" Text="By Card Number" Padding="15,0,0,0" />
+                        <customcontrols:MenuButtons GroupName="MethodButtons" Icon="{StaticResource more}" Text="By Phone Number" Padding="15,0,0,0" />
+                    </StackPanel>
+                    <customcontrols:MenuButtons GroupName="MenuButtons" x:Name="CreateCard" Margin="0,35,0,0" Text="Create Bonus Card" IsCheked="{Binding CreateCard}"
+                                                Icon="{StaticResource plus}" /> -->
+
                     
-                    <Button Margin="0,50,0,15" x:Name="SearchCard" Command="{Binding SearchBonusCard}" CommandParameter="SearchCard" Content="Search" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
-                    
-   
-                    <Button Margin="0,50,0,15" x:Name="CreateCard" Command="{Binding CreateBonusCard}" CommandParameter="CardCreate" Content="Create" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
+
+                    <Button Margin="0,50,0,0" x:Name="SearchCard"  Content="Search" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
+
+
+                    <Button Margin="0,50,0,0" x:Name="CreateCard"  Content="Create" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
 
 
                 </StackPanel>

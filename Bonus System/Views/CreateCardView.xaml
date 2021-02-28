@@ -43,7 +43,7 @@
 
                         <TextBox Margin="0,0,0,10" MaxLength="10" x:Name="PhoneNumber" Tag="phone number" Style="{StaticResource TextBoxPlaceHolder}" FontWeight="SemiBold" FontFamily="Courier New" FontStyle="Italic"></TextBox>
 
-                        <Button Margin="0,0,0,15" x:Name="Create" Command="{Binding CreateBonusCard}" CommandParameter="CardCreate" Content="Create" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
+                        <Button Margin="0,0,0,15" x:Name="Create" Content="Create" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
 
                     </StackPanel>
                 </Border>

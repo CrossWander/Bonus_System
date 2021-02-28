@@ -34,27 +34,27 @@
             <Setter Property="Margin" Value="11,0,0,0"/>
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsMouseOver, RelativeSource=
-                    {RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                    {RelativeSource Mode=FindAncestor, AncestorType=RadioButton}}"
                              Value="True">
                     <Setter Property="Foreground" Value="#525EC1"/>
                 </DataTrigger>
                 <DataTrigger Binding="{Binding IsChecked, RelativeSource=
-                    {RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                    {RelativeSource Mode=FindAncestor, AncestorType=RadioButton}}"
                              Value="True">
                     <Setter Property="Foreground" Value="#525EC1"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
         <!--#endregion-->
-        
-        <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}">
+
+        <Style x:Key="MenuButtonStyle" TargetType="{x:Type RadioButton}">
             <Setter Property="Height" Value="48"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
                         <Border Background="{TemplateBinding Background}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Padding="{Binding Padding, ElementName=this}">
@@ -66,13 +66,15 @@
                                     <!-- Column for text -->
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
+                                
+                                <Rectangle x:Name="Indicator" HorizontalAlignment="Left" Width="4"/>
 
                                 <Path Data="{Binding Icon, ElementName=this, 
                                     FallbackValue={StaticResource DefaultIcon}, 
                                     TargetNullValue={StaticResource DefaultIcon}}"
                                       HorizontalAlignment="Center"
                                       VerticalAlignment="Center" Stretch="Uniform"
-                                      Height="17" Width="18" Fill="#525EC1"/>
+                                      Height="17" Margin="15,0,0,0" Width="18" Fill="#525EC1"/>
                                 <TextBlock Style="{StaticResource MenuTextStyle}" Grid.Column="1" Text="{Binding Text, 
                                     ElementName=this, FallbackValue=MenuText, 
                                     TargetNullValue=MenuText}"/>
@@ -80,6 +82,9 @@
                             </Grid>
                         </Border>
                         <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Indicator" Property="Shape.Fill" Value="#525EC1"></Setter>
+                            </Trigger>
                             <DataTrigger Binding="{Binding IsSelected, ElementName=this}"
                                          Value="True">
                                 <Setter Property="IsChecked" Value="True"/>

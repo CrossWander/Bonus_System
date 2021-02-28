@@ -40,7 +40,7 @@
 
 
 
-                    <Button Margin="0,0,0,15" x:Name="Search" Command="{Binding SearchBonusCard}" CommandParameter="CardView" Content="Search" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
+                    <Button Margin="0,0,0,15" x:Name="Search" Content="Search" VerticalAlignment="Bottom"  Style="{StaticResource PrimaryButton}"></Button>
 
                 </StackPanel>
             </Border>

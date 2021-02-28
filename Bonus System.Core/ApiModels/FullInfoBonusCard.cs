@@ -7,15 +7,13 @@ namespace Bonus_System.Core.ApiModels
 {
     public class FullInfoBonusCard
     {
-        public string ErrorMessage { get; set; }
-        public bool Successful => ErrorMessage == null;
-
         public string CardNumber { get; set; }
-        public decimal? Balance { get; set; } 
-        public DateTime ExpirationDate { get; set; } 
+        public decimal? Balance { get; set; }
+        public DateTime ExpirationDate { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
+        public string ErrorMessage { get; set; }
     }
 }

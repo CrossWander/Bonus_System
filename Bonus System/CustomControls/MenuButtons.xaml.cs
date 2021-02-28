@@ -61,6 +61,16 @@ namespace Bonus_System.CustomControls
             DependencyProperty.Register("Padding", typeof(Thickness), typeof(MenuButtons));
 
 
+        public bool IsCheked
+        {
+            get { return (bool)GetValue(IsChekedProperty); }
+            set { SetValue(IsChekedProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for IsCheked.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IsChekedProperty =
+            DependencyProperty.Register("IsCheked", typeof(bool), typeof(MenuButtons));
+
 
         public bool IsSelected
         {

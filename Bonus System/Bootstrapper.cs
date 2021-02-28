@@ -25,6 +25,7 @@ namespace Bonus_System
         protected override void Configure()
         {
             _container.Instance(_container);
+              //  .PerRequest<IFullInfoBonusCardModel, FullInfoBonusCardModel>();
 
             _container
                 .Singleton<IWindowManager, WindowManager>()

@@ -17,10 +17,10 @@ namespace BonusSystem.WebServer.Data
         {
             base.OnModelCreating(builder);
 
-         /*   builder.Entity<Client>()
+            builder.Entity<Client>()
                            .HasOne(a => a.BonusCard)
                            .WithOne(b => b.Client)
-                           .HasForeignKey<BonusCard>(b => b.ClientId);*/
+                           .HasForeignKey<BonusCard>(b => b.ClientId);
             builder.Entity<BonusCard>().ToTable("BonusCard");
             builder.Entity<Client>()
                      .ToTable("Client");

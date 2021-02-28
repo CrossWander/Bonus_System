@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Bonus_System.Core.ApiModels;
 using Bonus_System.Helpers;
+using Bonus_System.Models;
 using Bonus_System.EventModels;
 using System.Threading;
 
@@ -13,8 +14,8 @@ namespace Bonus_System.ViewModels
 {
     public class CardViewModel : Screen
     {
-        private FullInfoBonusCard fullInfoBonusCard = new FullInfoBonusCard();
 
+        private FullInfoBonusCard fullInfoBonusCard = new FullInfoBonusCard();
 
 
 
@@ -26,7 +27,19 @@ namespace Bonus_System.ViewModels
         {
             _apiHelper = apiHelper;
             _events = events;
+           // _fullInfoBonusCard = fullInfoBonusCard;
         }
+        
+
+    /*    public FullInfoBonusCard FullInfoBonusCard
+        {
+            get { return (FullInfoBonusCard)_fullInfoBonusCard; }
+            set
+            {
+                _fullInfoBonusCard = (IFullInfoBonusCardModel)value;
+                NotifyOfPropertyChange(() => _fullInfoBonusCard);
+            }
+        }*/
 
         protected override async void OnViewLoaded(object view)
         {
@@ -36,6 +49,11 @@ namespace Bonus_System.ViewModels
 
         private async Task LoadProducts()
         {
+         /*   Client = FullInfoBonusCard.FirstName + " " + FullInfoBonusCard.LastName;
+            CardNumber = FullInfoBonusCard.CardNumber;
+            EndingData = FullInfoBonusCard.ExpirationDate;
+            Bonuses = FullInfoBonusCard.Balance.ToString();*/
+
             Client = fullInfoBonusCard.FirstName + " " + fullInfoBonusCard.LastName;
             CardNumber = fullInfoBonusCard.CardNumber;
             EndingData = fullInfoBonusCard.ExpirationDate;
