@@ -17,9 +17,6 @@ namespace Bonus_System.Core.Routes
 
         public const string SearchBonusCard = "api/bonuscard/search";
 
-        ///public const string SearchByPhoneNumber = "api/bonuscard/byphone";
-
-
         /// <summary>
         /// Put request
         /// The route to the UpdateCardBalance Api method

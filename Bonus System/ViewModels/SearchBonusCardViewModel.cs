@@ -1,15 +1,11 @@
-﻿using Bonus_System.Core.ApiModels;
-using Bonus_System.EventModels;
+﻿using Bonus_System.EventModels;
 using Bonus_System.Helpers;
 using Bonus_System.Models;
 using Caliburn.Micro;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace Bonus_System.ViewModels
 {

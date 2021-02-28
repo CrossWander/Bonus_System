@@ -7,14 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mime;
 using System.Threading.Tasks;
 
 
 namespace BonusSystem.WebServer.Controllers
 
 {
-  //  [Produces(MediaTypeNames.Application.Json)]
     [ApiController]
     public class ApiController : ControllerBase
     {
@@ -25,8 +23,7 @@ namespace BonusSystem.WebServer.Controllers
             Context = dbContext;
         }
 
-       // [HttpPost]
-        // [Route("users/{name}")]
+
         [Route(ApiRoutes.SearchBonusCard)]
         public async Task<FullInfoBonusCard> SearchBonusCard([FromBody]SearchBonusCardApiModel searchBonus)
         {
@@ -80,7 +77,6 @@ namespace BonusSystem.WebServer.Controllers
         }
 
 
-        //  [HttpPost]
         [Route(ApiRoutes.CreateCard)]
         public async Task<FullInfoBonusCard> CreateBonusCard([FromBody]CreateBonusCardApiModel createCard)
         {

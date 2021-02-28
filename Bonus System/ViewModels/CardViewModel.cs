@@ -1,8 +1,6 @@
 ﻿using Caliburn.Micro;
 using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Bonus_System.Core.ApiModels;
 using Bonus_System.Helpers;

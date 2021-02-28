@@ -1,13 +1,10 @@
 ﻿using Caliburn.Micro;
 using System.Linq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Bonus_System.Helpers;
 using Bonus_System.EventModels;
 using System.Threading.Tasks;
 using Bonus_System.Core.ApiModels;
-using System.Text.RegularExpressions;
 using System.Threading;
 using Bonus_System.Models;
 
@@ -120,13 +117,8 @@ namespace Bonus_System.ViewModels
 
             try
             {
-
-                FullInfoBonusCardModel fullinfo = await _apiHelper.CreateBonusCard(createBonusCardApiModel);
-
-
                 //ErrorMessage = "";
-                //   await _apiHelper.CreateBonusCard(CardOrPhoneNumber);
-                //
+                FullInfoBonusCardModel fullinfo = await _apiHelper.CreateBonusCard(createBonusCardApiModel);
                 await _events.PublishOnUIThreadAsync(new FindCardEvent(fullinfo));
             }
             catch (Exception)
