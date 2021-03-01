@@ -24,5 +24,6 @@ namespace Bonus_System.EventModels
             }
         }
 
+
     }
 }

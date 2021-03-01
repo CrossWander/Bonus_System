@@ -43,5 +43,12 @@ namespace Bonus_System.ViewModels
         {
             ActivateItemAsync(_container.GetInstance<SearchBonusCardViewModel>());
         }
+
+    /*    public void ByCard()
+        {
+        }
+        public void ByPhone()
+        {    
+        }*/
     }
 }

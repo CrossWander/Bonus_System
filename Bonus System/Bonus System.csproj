@@ -16,8 +16,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\BonusSystem.png" />
     <None Remove="Assets\card_back.PNG" />
     <None Remove="Assets\card_front.PNG" />
+    <None Remove="Assets\Icons\add.png" />
+    <None Remove="Assets\Icons\card.png" />
+    <None Remove="Assets\Icons\phone.png" />
+    <None Remove="Assets\Icons\search.png" />
     <None Remove="Assets\Logo\logo.ico" />
     <None Remove="Assets\Logo\logo.png" />
     <None Remove="Assets\picture.png" />
@@ -30,10 +35,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\BonusSystem.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\card_back.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\card_front.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\card.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\phone.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\search.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Logo\logo.ico">

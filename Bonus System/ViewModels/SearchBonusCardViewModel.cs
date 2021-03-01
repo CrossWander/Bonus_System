@@ -20,7 +20,9 @@ namespace Bonus_System.ViewModels
         {
             _apiHelper = apiHelper;
             _events = events;
+            _events.SubscribeOnPublishedThread(this);
         }
+
 
         private string _cardOrPhoneNumber;
         public string CardOrPhoneNumber
@@ -85,6 +87,7 @@ namespace Bonus_System.ViewModels
             }
 
         }
+
 
         public Task HandleAsync(FindCardEvent message, CancellationToken cancellationToken)
         {

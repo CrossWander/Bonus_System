@@ -24,9 +24,6 @@
     <Page Update="Resourses\Buttons.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resourses\icons.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Resourses\Texts.xaml">
       <SubType>Designer</SubType>
     </Page>

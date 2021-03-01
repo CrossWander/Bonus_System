@@ -10,7 +10,6 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resourses/icons.xaml"/>
                 <ResourceDictionary Source="/Resourses/Buttons.xaml" />
                 <ResourceDictionary Source="/Resourses/Texts.xaml" />
             </ResourceDictionary.MergedDictionaries>
@@ -37,22 +36,23 @@
                             <ImageBrush ImageSource="pack://application:,,,/Assets/Logo/logo.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    
 
 
-                    <TextBlock x:Name="Client"  Text="Иванов Иван" Margin="26,256,348,43" FontSize="26"
-                                     FontStyle="Italic" Width="322"/>
+
+                    <TextBlock x:Name="Client"  Text="Иванов Иван" Margin="-12,243,387,56" FontSize="26"
+                                     FontStyle="Italic" Width="322" FontFamily="Bahnschrift" FontWeight="Bold"/>
                     <TextBlock Text="Бонусная карта" Margin="214,10,322,304"/>
-                    <TextBlock x:Name="CardNumber" Text="0 0 0 0 0 0" Margin="75,184,397,101" FontSize="34"
-                                     FontStyle="Italic" Height="59"/>
-                    <TextBlock x:Name="EndingData" Text="мм/гг" Margin="298,206,272,105" FontSize="25"
-                                      FontStyle="Italic" Width="127" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="HorizontalAlignment">
-                    </TextBlock>
+                    <TextBlock x:Name="CardNumber" Text="0 0 0 0 0 0" Margin="45,184,427,101" FontSize="34"
+                                     FontStyle="Normal" Height="59" FontWeight="Normal" Foreground="White" FontFamily="AcmeFont"/>
+                    <TextBlock Text="Expiration date " Margin="321,177,210,134" FontSize="25"
+                                      FontStyle="Italic" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock x:Name="EndingData" Text="mm/yy" Margin="334,217,236,94" FontSize="25"
+                                      FontStyle="Italic" Width="127" RenderTransformOrigin="0.5,0.5"/>
 
-                    <TextBlock Text="Бонусов :" Margin="214,78,322,207" FontSize="30"
-                                     FontStyle="Italic" Height="59" d:LayoutOverrides="HorizontalAlignment"/>
-                    <TextBlock x:Name="Bonuses" Text="XXXXXX" Margin="344,78,192,207" FontSize="30"
-                                      FontStyle="Italic" Height="59" d:LayoutOverrides="HorizontalAlignment"/>
+                    <TextBlock Text="Bonuses :" Margin="224,78,312,207" FontSize="30"
+                                     FontStyle="Italic" Height="59"/>
+                    <TextBlock x:Name="Bonuses" Text="XXXXXX" Margin="355,78,181,207" FontSize="30"
+                                      FontStyle="Italic" Height="59"/>
 
                     <TextBox x:Name="AmountAdd"  Style="{StaticResource TextBoxPlaceHolder}" 
                              Margin="559,60,0,238" VerticalContentAlignment="Center" HorizontalAlignment="Left" 

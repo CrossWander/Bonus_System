@@ -9,7 +9,6 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resourses/icons.xaml"/>
                 <ResourceDictionary Source="/Resourses/Buttons.xaml" />
                 <ResourceDictionary Source="/Resourses/Texts.xaml" />
             </ResourceDictionary.MergedDictionaries>
